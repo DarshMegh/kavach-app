@@ -10,7 +10,7 @@
 
 ## 📹 Demo Video
 
-[▶️ Watch Demo](https://github.com/DarshMegh/kavach-app/blob/main/demo-kavach.mp4.mp4)
+[▶️ Watch Demo](https://github.com/DarshMegh/kavach-app/blob/main/demo-kavach.mp4)
 
 ---
 

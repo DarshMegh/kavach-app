@@ -1,113 +1,97 @@
-# 🛡️ Kavach — Personal Safety App
+This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-> *"Because every life deserves protection."*
+# Getting Started
 
-[![Download APK](https://img.shields.io/badge/Download-APK%20Beta-e8335a?style=for-the-badge&logo=android)](https://github.com/DarshMegh/kavach-app/releases/download/v1.0/Kavach.apk)
-[![Website](https://img.shields.io/badge/Website-Live-50369e?style=for-the-badge&logo=github)](https://darshmegh.github.io/kavach-app)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
 
----
+## Step 1: Start Metro
 
-## 📹 Demo Video
+First, you will need to run **Metro**, the JavaScript build tool for React Native.
 
-[▶️ Watch Demo](https://github.com/DarshMegh/kavach-app/blob/main/demo-kavach.mp4)
+To start the Metro dev server, run the following command from the root of your React Native project:
 
----
+```sh
+# Using npm
+npm start
 
-## 📱 What is Kavach?
-
-Kavach is a personal safety app built for Android that responds to emergencies **even when you can't ask for help**. No internet required. No backend server. Everything runs on your device.
-
-Shake your phone. Scream. Fall. — Kavach responds instantly.
-
----
-
-## ✨ Features
-
-| Feature | Description |
-|---------|-------------|
-| 📳 **Background Shake Detection** | Shake phone 3 times — fires SOS even when screen locked |
-| 🎙️ **Scream Detection** | Detects screams above 80dB even when app is closed |
-| 🤸 **Fall Detection** | Detects sudden falls via accelerometer |
-| 📹 **Auto Video Recording** | Silently records front + back camera on alert |
-| 📍 **Silent SMS with GPS** | Sends live location to all emergency contacts instantly |
-| 📞 **Auto Sequential Calling** | Auto-dials contacts one by one until someone picks up |
-| 📱 **Fake Call** | Escape uncomfortable situations with a realistic fake call |
-| ⏱️ **10 Second Cancel Window** | Accidentally triggered? Cancel before it fires |
-
----
-
-## 🔒 Privacy First
-
-- ✅ Zero backend servers
-- ✅ No account required
-- ✅ No data collection
-- ✅ Works fully offline
-- ✅ Videos saved to your own Google Photos
-- ✅ SMS goes directly phone-to-phone
-
----
-
-## 🚀 Tech Stack
-
-- **React Native** 0.76.5
-- **Native Kotlin** modules (5 custom modules)
-- **4 Android Foreground Services** (Shake / Scream / Fall / Video)
-- **MediaRecorder API** for silent video recording
-- **SmsManager API** for silent SMS
-- Zero dependencies on external servers
-
----
-
-## 📲 Download & Install
-
-1. [⬇️ Download Kavach APK](https://github.com/DarshMegh/kavach-app/releases/download/v1.0/Kavach.apk)
-2. On your Android phone: **Settings → Security → Install Unknown Apps → Allow**
-3. Open the downloaded APK and install
-4. Open Kavach → Add emergency contacts → Stay protected
-
-> ⚠️ This is a beta build. Play Store release coming soon.
-
----
-
-## 🗂️ Project Structure
-
-```
-SafeHerApp/
-├── android/app/src/main/java/com/safeherapp/
-│   ├── ShakeDetectionService.kt        # Background shake detection
-│   ├── ScreamDetectionService.kt       # Background scream detection
-│   ├── FallDetectionService.kt         # Fall detection algorithm
-│   ├── VideoRecorderService.kt         # Silent video recording
-│   ├── SmsModule.kt                    # Silent SMS via SmsManager
-│   └── MainApplication.kt             # Registers all 5 native modules
-├── src/
-│   ├── context/AlertContext.js         # Central alert state management
-│   ├── screens/
-│   │   ├── HomeScreen.js
-│   │   ├── ContactsScreen.js
-│   │   ├── SettingsScreen.js
-│   │   ├── HistoryScreen.js
-│   │   └── FakeCallScreen.js
-└── app.json
+# OR using Yarn
+yarn start
 ```
 
----
+## Step 2: Build and run your app
 
-## 👨‍💻 Developer
+With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
 
-**Megh Mangal** — Kavach Studios
+### Android
 
-- 📧 [megh.darshmangal@gmail.com](mailto:megh.darshmangal@gmail.com)
-- 🌐 [kavach-app website](https://darshmegh.github.io/kavach-app)
-- 💼 BPIT, AI & Data Science
+```sh
+# Using npm
+npm run android
 
----
+# OR using Yarn
+yarn android
+```
 
-## 📄 License
+### iOS
 
-MIT License — see [LICENSE](LICENSE) for details.
+For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
 
----
+The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
 
-<p align="center">Built with ❤️ in India 🇮🇳</p>
+```sh
+bundle install
+```
+
+Then, and every time you update your native dependencies, run:
+
+```sh
+bundle exec pod install
+```
+
+For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+
+```sh
+# Using npm
+npm run ios
+
+# OR using Yarn
+yarn ios
+```
+
+If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+
+This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+
+## Step 3: Modify your app
+
+Now that you have successfully run the app, let's make changes!
+
+Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+
+When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+
+- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
+- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+
+## Congratulations! :tada:
+
+You've successfully run and modified your React Native App. :partying_face:
+
+### Now what?
+
+- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
+- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+
+# Troubleshooting
+
+If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+
+# Learn More
+
+To learn more about React Native, take a look at the following resources:
+
+- [React Native Website](https://reactnative.dev) - learn more about React Native.
+- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
+- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
+- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
+- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
